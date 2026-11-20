@@ -1,6 +1,6 @@
 {
   "name": "iterative-refinement-solver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Iterative refinement for linear systems by re-solving with residual corrections.",
   "type": "module",
   "main": "src/index.js",
