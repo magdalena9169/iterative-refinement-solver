@@ -56,3 +56,10 @@ your own tests. The other edge is the early-exit rule: if a pass produces a
 residual that is not strictly smaller than the previous one, refinement stops, so
 `iterations` can be smaller than `maxIterations` even when `tolerance` was never
 reached. The returned `residualNorm` tells you which case you are in.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
